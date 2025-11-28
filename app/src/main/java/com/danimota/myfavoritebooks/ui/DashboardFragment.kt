@@ -1,4 +1,4 @@
-package com.danimota.myfavoritebooks.ui.dashboard
+package com.danimota.myfavoritebooks.ui
 
 import androidx.fragment.app.Fragment
 import com.danimota.myfavoritebooks.R

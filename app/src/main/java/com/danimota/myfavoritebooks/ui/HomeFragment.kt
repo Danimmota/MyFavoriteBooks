@@ -1,4 +1,4 @@
-package com.danimota.myfavoritebooks.ui.home
+package com.danimota.myfavoritebooks.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.danimota.myfavoritebooks.R
 import com.danimota.myfavoritebooks.databinding.FragmentHomeBinding
+import com.danimota.myfavoritebooks.viewmodels.HomeViewModel
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 

@@ -1,4 +1,4 @@
-package com.danimota.myfavoritebooks.ui.home
+package com.danimota.myfavoritebooks.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
