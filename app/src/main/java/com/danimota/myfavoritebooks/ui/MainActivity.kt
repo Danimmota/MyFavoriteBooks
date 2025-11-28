@@ -20,13 +20,15 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        setUpNavigation()
+        supportActionBar?.hide()
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        setUpNavigation()
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -40,14 +42,13 @@ class MainActivity : AppCompatActivity() {
 
         // Destinos top-level (sem Up)
         val appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.navigation_home, R.id.navigation_dashboard)
+            setOf(R.id.navigation_home, R.id.navigation_favorite)
         )
-
-        // Integra BottomNavigation com NavController
-        bottomNav.setupWithNavController(navController)
 
         // Integra a ActionBar (título + Up) com NavController e AppBarConfiguration
         setupActionBarWithNavController(navController, appBarConfiguration)
+        // Integra BottomNavigation com NavController
+        bottomNav.setupWithNavController(navController)
 
     }
 }

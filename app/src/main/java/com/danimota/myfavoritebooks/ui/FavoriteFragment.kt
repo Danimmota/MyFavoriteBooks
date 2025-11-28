@@ -4,20 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import com.danimota.myfavoritebooks.R
-import com.danimota.myfavoritebooks.databinding.FragmentHomeBinding
-import com.danimota.myfavoritebooks.viewmodels.HomeViewModel
+import com.danimota.myfavoritebooks.databinding.FragmentFavoriteBinding
+import com.danimota.myfavoritebooks.viewmodels.FavoriteViewModel
 
-class HomeFragment : Fragment(R.layout.fragment_home) {
+class FavoriteFragment : Fragment(R.layout.fragment_favorite) {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentFavoriteBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel: HomeViewModel by viewModels()
+    private val viewModel: FavoriteViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,7 +23,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentFavoriteBinding.inflate(inflater, container, false)
 
         return binding.root
     }
