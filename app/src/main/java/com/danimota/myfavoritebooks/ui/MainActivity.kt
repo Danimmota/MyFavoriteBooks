@@ -10,45 +10,45 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.danimota.myfavoritebooks.R
+import com.danimota.myfavoritebooks.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
 
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        // Barra superior
         supportActionBar?.hide()
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.container)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
+        // Configura bottom navigation
         setUpNavigation()
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        return navController.navigateUp() || super.onSupportNavigateUp()
-    }
-
     private fun setUpNavigation() {
+        val navView: BottomNavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        val bottomNav = findViewById<BottomNavigationView>(R.id.nav_view)
 
         // Destinos top-level (sem Up)
         val appBarConfiguration = AppBarConfiguration(
             setOf(R.id.navigation_home, R.id.navigation_favorite)
         )
 
-        // Integra a ActionBar (título + Up) com NavController e AppBarConfiguration
-        setupActionBarWithNavController(navController, appBarConfiguration)
+//        // Integra a ActionBar (título + Up) com NavController e AppBarConfiguration
+//        setupActionBarWithNavController(navController, appBarConfiguration)
         // Integra BottomNavigation com NavController
-        bottomNav.setupWithNavController(navController)
-
+        navView.setupWithNavController(navController)
     }
 }

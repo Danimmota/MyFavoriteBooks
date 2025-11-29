@@ -8,10 +8,22 @@ import com.danimota.myfavoritebooks.repository.BookRepository
 
 class HomeViewModel : ViewModel() {
 
-    private val _books = MutableLiveData<List<BookEntity>>()
-        val books: LiveData<List<BookEntity>> = _books
-    private val repository = BookRepository()
-    fun getAllBooks() {
-        _books.value = repository.getAllBooks()
+    // Acesso a dados
+    private val repository = BookRepository.getInstance()
+    private val _bookList = MutableLiveData<List<BookEntity>>()
+    val bookList: LiveData<List<BookEntity>> = _bookList
+
+    // Busca todos os livros
+    fun getAll() {
+        _bookList.value = repository.getAllBooks()
+    }
+
+    // Atualiza boolean de favorito
+    fun favorite(bookId: Int) {
+        // Atualiza boolean de favorito
+        repository.toggleFavoriteStatus(bookId)
+
+        // Atualiza listagem para refletir as mudanças
+        getAll()
     }
 }

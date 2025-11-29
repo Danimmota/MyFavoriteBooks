@@ -2,14 +2,30 @@ package com.danimota.myfavoritebooks.repository
 
 import com.danimota.myfavoritebooks.entity.BookEntity
 
-class BookRepository {
+class BookRepository private constructor(){
 
     private val books = mutableListOf<BookEntity>()
 
+    // Popula o repositório com os 10 livros iniciais
     init {
         books.addAll(getInitialBooks())
     }
 
+    companion object {
+        private lateinit var instance: BookRepository
+
+        /** Fornece a única instância do BookRepository.
+         * Esta é uma implementação thread-safe do padrão singleton.
+         */
+        fun getInstance(): BookRepository {
+            synchronized(this) {
+                if (!::instance.isInitialized) {
+                    instance = BookRepository()
+                }
+            }
+            return instance
+        }
+    }
     private fun getInitialBooks(): List<BookEntity> {
         return listOf(
             BookEntity(1, "To Kill a Mockingbird", "Harper Lee", true, "Ficção"),
@@ -34,24 +50,24 @@ class BookRepository {
             BookEntity(20, "Os Miseráveis", "Victor Hugo", false, "Romance")
         )
     }
-
+    //Retorna todos os livros armazenados.
     fun getAllBooks(): List<BookEntity> {
         return books
     }
-
+    //Retorna todos os livros marcados como favoritos.
     fun getFavoriteBooks(): List<BookEntity> {
         return books.filter { it.favorite }
     }
-
-    fun getBookById(id: Long): BookEntity? {
+    //Busca um livro pelo ID.
+    fun getBookById(id: Int): BookEntity? {
         return books.find { it.id == id }
     }
-
-    fun deleteBook(id: Long): Boolean {
+    // Remove um livro pelo ID.
+    fun deleteBook(id: Int): Boolean {
        return books.removeIf { it.id == id }
     }
-
-    fun toggleFavoriteStatus(id: Long) {
+    //Alterna entre true e false o atributo 'favorite'
+    fun toggleFavoriteStatus(id: Int) {
         val book = books.find { it.id == id }
         if(book != null) {
             book.favorite = !book.favorite

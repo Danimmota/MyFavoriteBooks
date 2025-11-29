@@ -3,11 +3,29 @@ package com.danimota.myfavoritebooks.viewmodels
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.danimota.myfavoritebooks.entity.BookEntity
+import com.danimota.myfavoritebooks.repository.BookRepository
 
 class FavoriteViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is favorite Fragment"
+
+    // Acesso a dados
+    private val repository = BookRepository.getInstance()
+
+    private val _bookList = MutableLiveData<List<BookEntity>>()
+    val bookList: LiveData<List<BookEntity>> = _bookList
+
+    // Busca livros favoritos
+    fun getFavorites() {
+        _bookList.value = repository.getFavoriteBooks()
     }
-    val text: LiveData<String> = _text
+
+    // Atualiza boolean de favorito
+    fun favorite(bookId: Int) {
+        // Atualiza boolean de favorito
+        repository.toggleFavoriteStatus(bookId)
+
+        // Atualiza listagem para refletir as mudanças
+        getFavorites()
+    }
 }

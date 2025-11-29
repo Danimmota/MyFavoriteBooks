@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.danimota.myfavoritebooks.ui.HomeFragment"
-        android:label="Home"
+        android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
@@ -16,5 +16,11 @@
         android:name="com.danimota.myfavoritebooks.ui.FavoriteFragment"
         android:label="@string/title_favorites"
         tools:layout="@layout/fragment_favorite" />
+
+    <fragment
+        android:id="@+id/navigation_book_details"
+        android:name="com.danimota.myfavoritebooks.ui.DetailsFragment"
+        android:label="@string/title_books_details"
+        tools:layout="@layout/fragment_details" />
 
 </navigation>
