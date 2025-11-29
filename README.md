@@ -59,9 +59,9 @@ Escolhida por garantir melhor performance, recursos de UI modernos e integraçã
 
 ## 6. Screenshots do app
 
-- [Home](.docs/home.png)
-- [Favorites](.docs/favorites.png)
-- [Details](.docs/details.png)
+- [Home](docs/home.png)
+- [Favorites](docs/favorites.png)
+- [Details](docs/details.png)
 
 ---
 ## 🛠️ 7. Instalação e Uso
