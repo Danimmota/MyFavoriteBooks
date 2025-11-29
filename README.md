@@ -4,8 +4,8 @@ Um aplicativo Android nativo realizado em Kotlin para organizar e favoritar livr
 ---
 
 ## 📌 1. Descrição do Problema
-A grande quantidade de livros que descubro em lojas virtuais, bibliotecas digitais e recomendações nas redes sociais sempre me fez perder o controle das obras que quero ler. 
-Como gosto muito de leitura, eu sentia falta de uma forma rápida, simples e acessível de organizar meus livros favoritos, registrar títulos que despertam meu interesse e navegar entre eles diretamente no celular. 
+A grande quantidade de livros que descubro em lojas virtuais, bibliotecas digitais e recomendações nas redes sociais sempre me fez perder o controle das obras que quero ler.
+Como gosto muito de leitura, eu sentia falta de uma forma rápida, simples e acessível de organizar meus livros favoritos, registrar títulos que despertam meu interesse e navegar entre eles diretamente no celular.
 Foi dessa necessidade pessoal que nasceu a ideia de criar o *MyFavoriteBooks*.
 
 O *MyFavoriteBooks* surge para solucionar esse problema oferecendo uma interface intuitiva com navegação fluida, cadastro de livros e gerenciamento de favoritos.
@@ -59,9 +59,9 @@ Escolhida por garantir melhor performance, recursos de UI modernos e integraçã
 
 ## 6. Screenshots do app
 
- - Home
- - Favoritos
- - Detalhes
+- [Home](.docs/home.png)
+- [Favorites](.docs/favorites.png)
+- [Details](.docs/details.png)
 
 ---
 ## 🛠️ 7. Instalação e Uso
@@ -86,8 +86,8 @@ Escolhida por garantir melhor performance, recursos de UI modernos e integraçã
 
 - Use a Bottom Navigation para navegar entre:
 
-  - Home — todos os livros 
-  - Favoritos — apenas livros marcados como favoritos
+    - Home — todos os livros
+    - Favoritos — apenas livros marcados como favoritos
 - Para favoritar ou desfavoritar um livro, toque no ícone de coração.
 
 ❗ Não há necessidade de credenciais — o aplicativo funciona offline.
@@ -96,12 +96,12 @@ Escolhida por garantir melhor performance, recursos de UI modernos e integraçã
 
 ### Sistema Operacional
 
- - Android 8.0 (API 26) ou superior.
+- Android 8.0 (API 26) ou superior.
 
 ### Ambiente de Desenvolvimento
 
- - Android Studio Giraffe ou superior. 
- - JDK 17 (recomendado pelo Android Studio).
+- Android Studio Giraffe ou superior.
+- JDK 17 (recomendado pelo Android Studio).
 
 ### Dependências Principais
     (gerenciadas automaticamente pelo Gradle)
