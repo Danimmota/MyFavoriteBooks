@@ -41,11 +41,19 @@ class BookViewHolder(private val item : ItemBookBinding, private val listener: B
     private fun setGenreBackgroundColor(genre: String) {
         when (genre) {
             "Terror" -> {
-                item.textviewGenre.setBackgroundResource(R.drawable.rounded_label_red)
+                item.textviewGenre.setBackgroundResource(R.drawable.rounded_label_purple)
             }
 
             "Fantasia" -> {
                 item.textviewGenre.setBackgroundResource(R.drawable.rounded_label_fantasy)
+            }
+
+            "Romance" -> {
+                item.textviewGenre.setBackgroundResource(R.drawable.rounded_label_magenta)
+            }
+
+            "Ficção" -> {
+                item.textviewGenre.setBackgroundResource(R.drawable.rounded_label_gold)
             }
 
             else -> {

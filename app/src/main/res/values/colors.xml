@@ -7,10 +7,12 @@
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="red">#BD0820</color>
+    <color name="teal_700">#31CCC8</color>
+    <color name="purple">#7525B9</color>
     <color name="gold">#FFD700</color>
-    <color name="blue">#1E90FF</color>
-    <color name="light_red">#FF6347</color>
+    <color name="light_purple">#B263FC</color>
+    <color name="light_green">#B6F2DD</color>
+    <color name="light_pink">#FBA2D5</color>
+    <color name="magenta">#D52D8B</color>
 
 </resources>

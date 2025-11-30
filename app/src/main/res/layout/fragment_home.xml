@@ -15,7 +15,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!--&lt;!&ndash;    android:id="@+id/fragment_home_root"&ndash;&gt;-->
-    <!--    tools:showIn="@layout/activity_main"-->
-
 </androidx.constraintlayout.widget.ConstraintLayout>

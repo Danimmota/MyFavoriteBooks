@@ -118,7 +118,7 @@ class DetailsFragment : Fragment(), View.OnClickListener  {
     private fun setGenreBackgroundColor(genre: String) {
         when (genre) {
             "Terror" -> {
-                binding.textviewGenreValue.setBackgroundResource(R.drawable.rounded_label_red)
+                binding.textviewGenreValue.setBackgroundResource(R.drawable.rounded_label_purple)
             }
 
             "Fantasia" -> {
