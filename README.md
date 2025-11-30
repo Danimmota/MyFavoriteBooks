@@ -111,3 +111,11 @@ Escolhida por garantir melhor performance, recursos de UI modernos e integraçã
 - `com.google.android.material:material`
 - `androidx.constraintlayout:constraintlayout`
 - `androidx.core:core-ktx`
+
+## 👩‍💻 Autora
+
+Desenvolvido por Daniela Mota
+
+📧 Email: danielamedeiromota@hotmail.com
+
+[🔗 LinkedIn](https://www.linkedin.com/in/danielammota/)
